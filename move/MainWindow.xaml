@@ -1,0 +1,30 @@
+<Window x:Name="MainWin" x:Class="move.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:move"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="150" Width="200"  AllowsTransparency="True" Background="{x:Null}"
+        WindowStyle="None" ResizeMode="NoResize" Margin="0" WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown" Topmost="True" Closed="MainWin_Closed" ShowInTaskbar="False" IsVisibleChanged="MainWin_IsVisibleChanged">
+    <Grid>
+        <Grid.ContextMenu>
+			<ContextMenu>
+				<MenuItem Header="Hide" Click="hide_Click" />
+				<MenuItem Header="Exit" Click="exit_Click" />
+            </ContextMenu>
+        </Grid.ContextMenu>
+        <Image x:Name="MainImg" Source="Images/idle_00.png" Stretch="None" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform x:Name="scaleTag" ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</Window>
